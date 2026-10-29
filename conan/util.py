@@ -33,7 +33,7 @@ def configure_zlib(recipe):
     recipe.options["zlib"].shared = False
 
 def configure_sqlite3(recipe):
-    recipe.options["sqlite3"].threadsafe = 0
+    recipe.options["sqlite3"].threadsafe = 2
     recipe.options["sqlite3"].enable_fts5 = True
     
 def run_local_recipe(recipe, local_recipe_path, lib, version):
