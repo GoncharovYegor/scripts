@@ -243,6 +243,7 @@ function(AddGTest name)
     cmake_parse_arguments(ARG "${__options}" "${__one_val}" "${__multi_val}" ${ARGN})
 
     AddTarget(ut_${name} app_console
+    		SKIP_INSTALL
             LINK_LIBRARIES GTest::gtest_main [ ARG_MOCK GTest::gmock ] ${ARG_LINK_LIBRARIES}
             ${ARG_UNPARSED_ARGUMENTS}
     )
