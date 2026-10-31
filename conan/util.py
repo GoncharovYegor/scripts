@@ -22,6 +22,7 @@ def configure_libjxl(recipe):
 
 def configure_djvulibre(recipe):
     recipe.options["djvulibre"].shared = True
+    recipe.options["djvulibre"].tools = False
 
 def configure_poppler(recipe):
     recipe.options["poppler"].shared = False
